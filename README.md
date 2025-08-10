@@ -80,3 +80,25 @@ Credit card fraud detection is a crucial problem in the financial industry, as f
 
 ---
 
+## ▶️ How to Run
+
+- Ensure Python 3.13+ is available
+- Install dependencies:
+
+```bash
+python3 -m pip install --user --break-system-packages -r requirements.txt
+```
+
+- Start the Streamlit app:
+
+```bash
+streamlit run app.py --server.headless true
+```
+
+- Open the provided URL to use the app. Use the Realtime tab for single predictions or upload a CSV in the Batch tab.
+
+## ℹ️ Notes
+
+- The repository includes a `random_forest_model.joblib`. If it fails to load due to environment mismatches, the app will automatically train a small synthetic fallback model so you can still interact with the UI.
+- You can also provide a custom path to a model file via the `MODEL_PATH` environment variable.
+
